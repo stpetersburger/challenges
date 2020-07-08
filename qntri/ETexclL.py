@@ -17,9 +17,11 @@ import os
 import re
 
 #defying the location of the files to read from and to write into
+#file to read from
 frp="/content/gdrive/My Drive/Experiments/testassignments/quantori/CoordStatusMA.csv"
+#file to wtite to
 fwp="/content/gdrive/My Drive/Experiments/testassignments/quantori/new_CoordStatusMA.csv"
-
+#code to parse the initial data file CoordStatusMA.csv
 fr = open(frp, "r")
 fw = open(fwp, "a")
 fw.writelines("status,date_timestamp,latitude,longitude,number_of_people"+"\n")
