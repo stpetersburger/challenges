@@ -32,9 +32,9 @@ distkey (action_ts)
 -- Credentials might have changed
 
        copy    actions
-       from    's3://tradus-bi-recruiting/actions'
-credentials    'aws_access_key_id=AKIAIQGLDQCPBKH6VQCA;aws_secret_access_key=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'
- dateformat    'auto'
+       from    's3://tradus-bi-recruiting/actions' #s3 bucket
+credentials    'aws_access_key_id=XXXX;aws_secret_access_key=XXXX' #AWS S3 bucjet access credentials (available in assignment_task.pdf)
+ dateformat    'auto'                              #fixing the dateformat
        gzip
 
 -- Excersise 2(two)
