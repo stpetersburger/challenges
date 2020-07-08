@@ -119,7 +119,7 @@ distkey (action_type)
 -- There is no alteration of the date format
 
 copy actions from 's3://tradus-bi-recruiting/actions'
-                        credentials 'aws_access_key_id=AKIAIQGLDQCPBKH6VQCA;aws_secret_access_key=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'
+                        credentials 'aws_access_key_id=XXXX;aws_secret_access_key=XXXX' #AWS S3 bucjet access credentials (available in assignment_task.pdf)
                         gzip
 
 -- Excersise 3(three)
