@@ -25,11 +25,11 @@
 
 ### Validation
 
-1. Open Docker desktop and check for **aue_workshop2025** project having 5 containers as below
+1. Open Docker desktop and check for **AUE_workshop2025** project having 5 containers as below
 
-	 ![img.png](pictures/docker_desktop_containers.png)
+	 ![docker_desktop](https://github.com/stpetersburger/challenges/blob/aue/AUE_workshop2025/pictures/docker_desktop_containers.png)
 	
 2. Spark Cluster is up and running. Go to http://localhost:8080/. You should get a Spark Master UI with 2 worker nodes -
 	
-     ![img_1.png](pictures/spark_application.png)
+     ![spark_application](pictures/spark_application.png)
 

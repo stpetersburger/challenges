@@ -13,8 +13,8 @@ This Code assessment represents a coding challenge for Data Engineering roles.
 
 In this challenge, we will use a dataset having the current job posting hosted by the City of New York which is available on the City of New York's official jobs site (https://www1.nyc.gov/jobs/index.page).
 
-- Internal postings availble to city employees and external postings availbale to the public are included. 
-- Data is accesible in the CSV file [nyc-jobs.csv](https://github.com/projectforyou/project1/blob/main/dataset/nyc-jobs.csv)
+- Internal postings available to city employees and external postings availbale to the public are included. 
+- Data is accessible in the CSV file [nyc-jobs.csv](https://github.com/stpetersburger/challenges/blob/aue/AUE_workshop2025/dataset/nyc-jobs.csv)
 
 This challenge is composed of following steps: 
 
@@ -41,37 +41,37 @@ This challenge is composed of following steps:
 - Above mentioned challenge
 - Test cases : you need to create/run your own test cases for every functions you build.
 - Code Comments 
-- If any deployment to be done, please document the proposals of the deployment steps in [MyDocument.md](https://github.com/projectforyou/project1/blob/main/MyDocument.md)
-- If you had to trigger your code, please suggest your approach in [MyDocument.md](https://github.com/projectforyou/project1/blob/main/MyDocument.md)
+- If any deployment to be done, please document the proposals of the deployment steps in [MyDocument.md](https://github.com/stpetersburger/challenges/blob/aue/AUE_workshop2025/MyDocument.md)
+- If you had to trigger your code, please suggest your approach in [MyDocument.md](https://github.com/stpetersburger/challenges/blob/aue/AUE_workshop2025/MyDocument.md)
 
 ## Coding Instructions
 
 - PySpark should be used
 - Feel free to use any libraries (you can use pip install, if needed)
 - Use a visualization library to present your analysis results.
-- Any learnings/ challenges/ considerations/ assumptions, please document in [MyDocument.md](https://github.com/projectforyou/project1/blob/main/MyDocument.md)
+- Any learnings/ challenges/ considerations/ assumptions, please document in [MyDocument.md](https://github.com/stpetersburger/challenges/blob/aue/AUE_workshop2025/MyDocument.md)
 
 ## Technical Support:
 
 1. Use your own Github account to fork this repository.
-2. Follow the installation instructions in [INSTALL.md](https://github.com/projectforyou/project1/blob/main/INSTALL.md)
+2. Follow the installation instructions in [INSTALL.md](https://github.com/stpetersburger/challenges/blob/aue/AUE_workshop2025/INSTALL.md)
 3. Open the Jupyter notebook home page, using the link similar to the one highlighted in the picture 
 
-  ![jupyter-notebook](https://github.com/projectforyou/project1/blob/main/pictures/docker-compose.png)
+  ![jupyter-notebook](https://github.com/stpetersburger/challenges/blob/aue/AUE_workshop2025/pictures/docker_compose.png)
 
 4. Open the notebook (assesment_notebook.ipynb). 
 5. Run all the cells
-6. After creating spark session, you should be able to see an application **pyspark-assesment** running in the Spark Master UI as below. 
+6. After creating spark session, you should be able to see an application **AUE_workshop2025** running in the Spark Master UI as below. 
 
-  ![spark_application]()
+  ![spark_application](https://github.com/stpetersburger/challenges/blob/aue/AUE_workshop2025/pictures/spark_master_ui.png)
 
 By now you would already have every setup needed in your own machine :
 
 - Spark cluster with a master and 2 worker nodes.
 - Notebook to start working, with the basic libraries imported (Please feel free to import any new library, if required). 
 - Dataset read that is required for your activity.
-- Sample function within the notebook arriving at a basic KPI. [distinct_values.py](https://github.com/projectforyou/project1/blob/main/src/utils/distinct_values.py)
-- Sample test case for testing the function. [test_distinct_values.py](https://github.com/projectforyou/project1/blob/main/src/tests/test_distinct_values.py)
+- Sample function within the notebook arriving at a basic KPI. [distinct_values.py](https://github.com/stpetersburger/challenges/blob/aue/AUE_workshop2025/src/utils/distinct_values.py)
+- Sample test case for testing the function. [test_distinct_values.py](https://github.com/stpetersburger/challenges/blob/aue/AUE_workshop2025/src/tests/test_distinct_values.py)
 - Runnable test cases using '**make test**'
 
 ## Submission:
