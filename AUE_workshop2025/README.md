@@ -57,11 +57,11 @@ This challenge is composed of following steps:
 2. Follow the installation instructions in [INSTALL.md](https://github.com/stpetersburger/challenges/blob/aue/AUE_workshop2025/INSTALL.md)
 3. Open the Jupyter notebook home page, using the link similar to the one highlighted in the picture 
 
-  ![jupyter-notebook](https://github.com/stpetersburger/challenges/blob/aue/AUE_workshop2025/pictures/jupyter_spark_notebook.png)
+  ![jupyter-notebook](https://github.com/stpetersburger/challenges/blob/aue/AUE_workshop2025/pictures/docker_compose.png)
 
 4. Open the notebook.
 
-  ![AUE_workshop2025.ipynb]()
+  ![AUE_workshop2025.ipynb](https://github.com/stpetersburger/challenges/blob/aue/AUE_workshop2025/pictures/jupyter_spark_notebook.png)
 
 5. Run all the cells
 6. After creating spark session, you should be able to see an application **AUE_workshop2025** running in the Spark Master UI as below. 
