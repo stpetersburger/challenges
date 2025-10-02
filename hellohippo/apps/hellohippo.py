@@ -8,7 +8,8 @@ import json
 
 
 def run(args):
-    pth = '/Users/ilya/mystuff/github_projects/challenges/hellohippo/entrypoint'
+    pth = args.path + '/entrypoint'
+    pth_output = pth + '/' + 'output'
 
     claims = pd.DataFrame()
     pharmacies = pd.DataFrame()
@@ -40,6 +41,7 @@ def run(args):
     #print(claims.groupby(['if_reverted']).count())
     #print(reverts)
 
+    ### assigment 2
     claims_processed = claims.groupby(['npi','ndc']).agg(
        fills=('id', 'count'),
        reverted=('if_reverted', 'sum'),
@@ -48,36 +50,25 @@ def run(args):
     ).reset_index()
 
 
-    print_json(claims_processed.to_json(orient='records'),'assignment_2',pth + '/' + 'output')
+    print_json(claims_processed.to_json(orient='records'),'assignment_2',pth_output)
 
-
+    ### assigment 3
     claims_processed_2 = pd.merge(claims, pharmacies, on='npi', how='left')
-    print(claims_processed_2)
+    
     claims_processed_2 = claims_processed_2.groupby(['ndc','chain']).agg(
        avg_price=('price', 'mean')
     ).reset_index()
-    #print(claims_processed_2)
+    
     result = claims_processed_2.groupby('ndc').apply(lambda x: x[['chain', 'avg_price']].to_dict(orient='records')).reset_index(name='chain')
-    print_json(result.rename(columns={'chain': 'name'}).to_json(orient='records'),'assignment_3',pth + '/' + 'output')
-
-    claims_processed_3 = claims.groupby(['ndc', 'quantity']).agg(
-        times_ordered=('id', 'count')
-    ).reset_index()
-
-    pd.set_option('display.max_rows', None)
-    pd.set_option('display.max_columns', None)
-    pd.set_option('display.width', None)
-    pd.set_option('display.max_colwidth', None)
-
-    print(claims_processed_3.sort_values(['ndc','times_ordered'], ascending=False))
-
-    result = claims.groupby('ndc')['quantity'].apply(lambda x: x.mode().tolist()).reset_index()
-    print(result)
-    print_json(result.rename(columns={'quantity': 'most_prescribed_quantity'}).to_json(orient='records'),'assignment_4',pth + '/' + 'output')
+    print_json(result.rename(columns={'chain': 'name'}).to_json(orient='records'),'assignment_3',pth_output)
+    
+    ## assigment 4
+    claims_processed_3 = claims.groupby('ndc')['quantity'].apply(lambda x: x.mode().tolist()).reset_index()
+    print_json(claims_processed_3.rename(columns={'quantity': 'most_prescribed_quantity'}).to_json(orient='records'),'assignment_4',pth_output)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='sourcing the app with the data from files')
-    parser.add_argument('-connection_name', dest='conn', required=False,
-                        help="connection name to gbq")
+    parser.add_argument('-path', dest='path', required=False,
+                        help="path_to_entrypoint_folder")
 
     run(parser.parse_args())
